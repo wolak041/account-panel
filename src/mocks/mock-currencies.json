@@ -1,0 +1,37 @@
+{
+    "data": {
+        "collection": [
+            {
+                "currencyId": "728c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "currencyName": "Testowa waluta 1",
+                "precision": 2
+            },
+            {
+                "currencyId": "7d8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "currencyName": "Testowa waluta 2",
+                "precision": 8
+            },
+            {
+                "currencyId": "7a8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "currencyName": "Testowa waluta 3",
+                "precision": 8
+            },
+            {
+                "currencyId": "7b8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "currencyName": "Testowa waluta 4",
+                "precision": 18
+            },
+            {
+                "currencyId": "7b8c1ea1-2a01-41b5-ade4-4b728b62faa6",
+                "balanceName": "Testowa waluta 5",
+                "precision": 18
+            }
+        ],
+        "hasNextPage": false,
+        "query": {
+            "limit": 20,
+            "offset": 0
+        }
+    },
+    "timestamp": 1670919748739
+}

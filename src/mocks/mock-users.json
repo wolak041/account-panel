@@ -1,0 +1,32 @@
+{
+    "data": {
+        "collection": [
+            {
+                "userId": "ac1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "userName": "jan.kowalski@norion.com"
+            },
+            {
+                "userId": "dd1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "userName": "jan.kowalski1@norion.com"
+            },
+            {
+                "userId": "ad1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "userName": "jan.kowalski2@norion.com"
+            },
+            {
+                "userId": "bd1bcd9-615c-4390-94f1-6601a107cf0e",
+                "userName": "jan.kowalski3@norion.com"
+            },
+            {
+                "userId": "bd1abcd9-615c-4390-94f1-6601a107cf0e",
+                "userName": "jan.kowalski@norion.com"
+            }
+        ],
+        "hasNextPage": false,
+        "query": {
+            "limit": 20,
+            "offset": 0
+        }
+    },
+    "timestamp": 1670919448729
+}

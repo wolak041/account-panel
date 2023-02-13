@@ -1,0 +1,62 @@
+{
+    "data": {
+        "collection": [
+            {
+                "userId": "ac1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "balanceId": "7v834b8b-77d5-4a58-b815-8cd91533e227",
+                "currencyId": "728c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "balanceType": "USER",
+                "balanceName": "Testowe saldo 1",
+                "fundsAvailable": "50660",
+                "updatedAt": 1670363421944,
+                "createdAt": 1670362615433
+            },
+            {
+                "userId": "dd1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "balanceId": "7d834b8b-77d5-4a58-b815-8cd91533e227",
+                "currencyId": "7d8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "balanceType": "USER",
+                "balanceName": "Testowe saldo 2",
+                "fundsAvailable": "90071992547409912",
+                "updatedAt": 1640363421944,
+                "createdAt": 1670945403333
+            },
+            {
+                "userId": "ad1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "balanceId": "7a834b8b-77d5-4a58-b815-8cd91533e227",
+                "currencyId": "7a8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "balanceType": "ADMIN",
+                "balanceName": "Testowe saldo 3",
+                "fundsAvailable": "90071992547409912",
+                "updatedAt": 1650363421944,
+                "createdAt": 1665973615433
+            },
+            {
+                "userId": "bd1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "balanceId": "7b834b8b-77d5-4a58-b815-8cd91533e227",
+                "currencyId": "7b8c1ea1-2d01-41b5-ade4-4b728b62faa6",
+                "balanceType": "SYSTEM",
+                "balanceName": "Testowe saldo 4",
+                "fundsAvailable": "8007199254740991292547409912",
+                "updatedAt": 1650863421944,
+                "createdAt": 1668973615433
+            },
+            {
+                "userId": "bd1cbcd9-615c-4390-94f1-6601a107cf0e",
+                "balanceId": "7c834b8b-77d5-4a58-b815-8cd91533e227",
+                "currencyId": "7b8c1ea1-2a01-41b5-ade4-4b728b62faa6",
+                "balanceType": "SYSTEM",
+                "balanceName": "Testowe saldo 5",
+                "fundsAvailable": "8007199254740991292547409912",
+                "updatedAt": 1650863421944,
+                "createdAt": 1650862615433
+            }
+        ],
+        "hasNextPage": false,
+        "query": {
+            "limit": 20,
+            "offset": 0
+        }
+    },
+    "timestamp": 1670919748729
+}
