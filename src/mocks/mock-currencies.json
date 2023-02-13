@@ -23,7 +23,7 @@
             },
             {
                 "currencyId": "7b8c1ea1-2a01-41b5-ade4-4b728b62faa6",
-                "balanceName": "Testowa waluta 5",
+                "currencyName": "Testowa waluta 5",
                 "precision": 18
             }
         ],

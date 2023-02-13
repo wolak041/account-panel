@@ -1,26 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { ROUTES } from './config';
+import { ThemeProvider } from './contexts/ThemeProvider';
+import { BasicLayout } from './layouts/Basic';
+import { BalancesPage } from './pages/Balances';
+import { balanceLoader } from './pages/Balances/balanceLoader';
+import { CurrenciesPage } from './pages/Currencies';
+import { ErrorPage } from './pages/Error';
+import { MainPage } from './pages/Main';
+import { UsersPage } from './pages/Users';
+import { userLoader } from './pages/Users/userLoader';
+
+const router = createBrowserRouter([
+    {
+        path: ROUTES.MAIN,
+        element: (
+            <BasicLayout>
+                <Outlet />
+            </BasicLayout>
+        ),
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                errorElement: <ErrorPage />,
+                children: [
+                    {
+                        index: true,
+                        element: <MainPage />,
+                    },
+                    {
+                        path: `${ROUTES.USERS}/:userId`,
+                        element: <UsersPage />,
+                        loader: userLoader,
+                    },
+                    {
+                        path: ROUTES.CURRENCIES,
+                        element: <CurrenciesPage />,
+                    },
+                    {
+                        path: `${ROUTES.BALANCES}/:balanceId`,
+                        element: <BalancesPage />,
+                        loader: balanceLoader,
+                    },
+                ],
+            },
+        ],
+    },
+]);
+
+const App = () => (
+    <ThemeProvider>
+        <RouterProvider router={router} />
+    </ThemeProvider>
+);
 
 export default App;
