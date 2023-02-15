@@ -45,21 +45,23 @@ export const MainPage = () => {
     return (
         <Box>
             <Typography sx={{ fontWeight: 'bold', fontSize: 24, mb: 2 }}>Historia</Typography>
-            <StyledFilterHeader>
-                <Filter
-                    label="Data"
-                    value={dateFilter}
-                    list={dateFilterList}
-                    onChange={handleDateFilterChange}
-                />
-                <Filter
-                    label="Typ operacji"
-                    value={operationTypeFilter}
-                    list={operationTypeFilterList}
-                    onChange={handleOperationTypeFilterChange}
-                />
-            </StyledFilterHeader>
-            <DataTable balances={filteredData} />
+            <Box>
+                <StyledFilterHeader>
+                    <Filter
+                        label="Data"
+                        value={dateFilter}
+                        list={dateFilterList}
+                        onChange={handleDateFilterChange}
+                    />
+                    <Filter
+                        label="Typ operacji"
+                        value={operationTypeFilter}
+                        list={operationTypeFilterList}
+                        onChange={handleOperationTypeFilterChange}
+                    />
+                </StyledFilterHeader>
+                <DataTable balances={filteredData} />
+            </Box>
         </Box>
     );
 };

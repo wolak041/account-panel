@@ -4,12 +4,14 @@ import { Box, CssBaseline } from '@mui/material';
 import { Sidebar } from '../../components/Sidebar';
 import { Topbar } from '../../components/Topbar';
 import { DRAWER_WIDTH } from '../../config';
+import { useIsSmallScreen } from '../../hooks/useIsSmallScreen';
 
 interface BasicLayoutProps {
     children: React.ReactNode;
 }
 
 export const BasicLayout = ({ children }: BasicLayoutProps) => {
+    const isSmallScreen = useIsSmallScreen();
     const [mobileOpenDrawer, setMobileOpenDrawer] = useState(false);
     const handleDrawerToggle = () => {
         setMobileOpenDrawer((prev) => !prev);
@@ -18,7 +20,7 @@ export const BasicLayout = ({ children }: BasicLayoutProps) => {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <Box component="nav" sx={{ width: { sm: DRAWER_WIDTH }, flexShrink: { sm: 0 } }}>
+            <Box component="nav" sx={isSmallScreen ? {} : { width: DRAWER_WIDTH, flexShrink: 0 }}>
                 <Sidebar
                     width={DRAWER_WIDTH}
                     mobileOpenDrawer={mobileOpenDrawer}
