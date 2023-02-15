@@ -33,7 +33,7 @@ const lightTheme: ThemeOptions = {
             main: '#4c4c4c',
         },
         secondary: {
-            main: '#d6e0e0',
+            main: '#e3e6e6',
         },
         background: {
             default: '#f3f3f3',
@@ -45,7 +45,7 @@ const lightTheme: ThemeOptions = {
             color: '#444444',
         },
         caption: {
-            color: '#adadad',
+            color: '#818181',
         },
     },
     components: {
@@ -62,10 +62,10 @@ const darkTheme: ThemeOptions = {
     palette: {
         mode: 'dark',
         primary: {
-            main: '#4f4f4f',
+            main: '#dbdbdb',
         },
         secondary: {
-            main: '#0E1D2F',
+            main: '#454747',
         },
         background: {
             default: '#383838',
@@ -74,7 +74,7 @@ const darkTheme: ThemeOptions = {
     typography: {
         fontFamily,
         caption: {
-            color: '#adadad',
+            color: '#818181',
         },
     },
     components: {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-import { Balance } from '../../interfaces/Balance';
+import { RawBalance } from '../../domain/Balance';
 
 export const BalancesPage = () => {
-    const data = useLoaderData() as Balance;
+    const data = useLoaderData() as RawBalance;
 
     return <div className="balances">Saldo {data.balanceName}</div>;
 };

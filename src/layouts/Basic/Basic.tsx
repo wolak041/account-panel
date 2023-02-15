@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import { Box, CssBaseline } from '@mui/material';
+import { Sidebar } from '../../components/Sidebar';
+import { Topbar } from '../../components/Topbar';
 import { DRAWER_WIDTH } from '../../config';
-import { Sidebar } from '../../containers/Sidebar';
-import { Topbar } from '../../containers/Topbar';
 
 interface BasicLayoutProps {
     children: React.ReactNode;

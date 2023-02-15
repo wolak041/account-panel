@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -6,27 +6,21 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { Box, Fab, Menu, MenuItem, Typography } from '@mui/material';
 import { isLightMode, Theme } from '../../contexts/ThemeProvider';
+import { usePopupMenu } from '../../hooks/usePopupMenu';
 import { Avatar } from '../Avatar';
 
 export const CurrentUser = () => {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-    const isOpen = Boolean(anchorEl);
-    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+    const { anchorElement, isMenuOpen, handleTriggerClick, handleMenuClose } = usePopupMenu();
 
     const { mode, toggleThemeMode } = useContext(Theme);
     const handleToggleMode = () => {
         toggleThemeMode();
-        handleClose();
+        handleMenuClose();
     };
 
     return (
         <>
-            <Fab variant="extended" onClick={handleClick} sx={{ boxShadow: 'none' }}>
+            <Fab variant="extended" onClick={handleTriggerClick} sx={{ boxShadow: 'none' }}>
                 <Avatar />
                 <Box
                     sx={{
@@ -37,23 +31,19 @@ export const CurrentUser = () => {
                         mr: 2,
                     }}
                 >
-                    <Typography variant="body1" sx={{ textTransform: 'none' }}>
+                    <Typography variant="body1" sx={{ textTransform: 'none', lineHeight: 1 }}>
                         Jan Kowalski
                     </Typography>
-                    <Typography variant="caption" sx={{ textTransform: 'none' }}>
+                    <Typography variant="caption" sx={{ textTransform: 'none', lineHeight: 1 }}>
                         j.kowalski@gmail.com
                     </Typography>
                 </Box>
-                {isOpen ? <ExpandLess /> : <ExpandMore />}
+                {isMenuOpen ? <ExpandLess /> : <ExpandMore />}
             </Fab>
             <Menu
-                id="demo-customized-menu"
-                MenuListProps={{
-                    'aria-labelledby': 'demo-customized-button',
-                }}
-                anchorEl={anchorEl}
-                open={isOpen}
-                onClose={handleClose}
+                anchorEl={anchorElement}
+                open={isMenuOpen}
+                onClose={handleMenuClose}
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'right',

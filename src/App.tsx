@@ -9,6 +9,7 @@ import { balanceLoader } from './pages/Balances/balanceLoader';
 import { CurrenciesPage } from './pages/Currencies';
 import { ErrorPage } from './pages/Error';
 import { MainPage } from './pages/Main';
+import { mainLoader } from './pages/Main/mainLoader';
 import { UsersPage } from './pages/Users';
 import { userLoader } from './pages/Users/userLoader';
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
                     {
                         index: true,
                         element: <MainPage />,
+                        loader: mainLoader,
                     },
                     {
                         path: `${ROUTES.USERS}/:userId`,
